@@ -1,8 +1,8 @@
-#Analyzing Multi-Dataset Learning and its Robustness for Stance Detection
-#####Introduction
+# Analyzing Multi-Dataset Learning and its Robustness for Stance Detection
+##### Introduction
 This repository modifies and adapts the [official mt-dnn repository](https://github.com/namisan/mt-dnn) to multi-dataset stance detection and robustness experiments. Ten stance detection datasets of different domains are trained via single-dataset and multi-dataset learning. Three adversarial attacks to probe and compare the robustness of both settings have been added. The framework can easily be adapted to include more datasets and adversarial attack sets.
 
-#####Fine-tuned models
+##### Fine-tuned models
 The BERT and MT-DNN weights, fine-tuned on all ten stance detection datasets, can be downloaded [here](https://public.ukp.informatik.tu-darmstadt.de/bes/fine_tuned_models.zip). The models can be placed in folder _mt_dnn_models_ and used by modifying the run scripts (see below).
 
 
@@ -11,30 +11,30 @@ Contact person: [Benjamin Schiller](mailto:schiller@ukp.informatik.tu-darmstadt.
 https://www.ukp.tu-darmstadt.de/
 
 
-###Install requirements
+### Install requirements
 
 The repository requires Python 3.6+
 
-#####1. (Optional) Set up OpenNMT-py to create data for the paraphrasing attack 
+##### 1. (Optional) Set up OpenNMT-py to create data for the paraphrasing attack 
 
         git clone https://github.com/OpenNMT/OpenNMT-py.git
         cd OpenNMT-py/
         python3 setup.py install
 
-#####2. Install python requirements
+##### 2. Install python requirements
     
         pip install -r requirements.txt
        
 
-###Preprocessing
+### Preprocessing
  
-#####1. Download all data sets
+##### 1. Download all data sets
    
         bash download.sh
         
 Note: three of the datasets have to be manually retrieved due to license reasons. Please follow the instructions at the bottom of the download.sh file
  
-#####2. Start preprocessing of all datasets
+##### 2. Start preprocessing of all datasets
 
         python prepro.py
         
@@ -44,10 +44,10 @@ Note: see _parse_args()_ in prepro.py for additional parameters, e.g.:
     - please note that the paraphrasing can take several hours to complete for all datasets
     - use a GPU to fasten up translation (export CUDA_VISIBLE_DEVICES=0)
          
-###Run experiments and evaluate
+### Run experiments and evaluate
 All scripts can be found in the _scripts_ folder.
 
-#####1. Start training 
+##### 1. Start training 
 
         # Train all stance detection datasets in a multi dataset fashion 
         bash run_mt_dnn_all_stance_MTL_seed_loop.sh (see bash file for parameters)
@@ -57,7 +57,7 @@ All scripts can be found in the _scripts_ folder.
         bash run_mt_dnn_ST_seed_loop.sh (see bash file for parameters)
         E.g.: bash run_mt_dnn_ST_seed_loop.sh 1 bert_model_base ibmcs 30
     
-#####2. Run adversarial attack sets on previously trained model
+##### 2. Run adversarial attack sets on previously trained model
     
         # For multi dataset model 
         bash evaluate_mt_dnn_all_stance_MTL_seed_loop.sh (see bash file for parameters)
@@ -71,7 +71,7 @@ Note:
 - the timestamp can be found in the _checkpoint_ folder for the specific model (folder name)
 
 
-#####3. Evaluate results
+##### 3. Evaluate results
         
 The predictions for each seed can be found in the _checkpoints_ folder. The scores for each seed can be found in the _results_ folder. To average the results over all seeds, use the following script:
         
@@ -82,7 +82,7 @@ Note: Adapt the parameters in the script to your needs. A new file for the test 
 
 For more infos of the underlying Framework itself, please refer to the [official mt-dnn repository](https://github.com/namisan/mt-dnn).
 
-###Add you own datasets
+### Add you own datasets
 For all steps in the following, please use the other dataset entries for guidance.
 
 1. Add your dataset file to the _data_ folder
@@ -91,7 +91,7 @@ For all steps in the following, please use the other dataset entries for guidanc
 4. Add a dataset reader in _data_utils/glue_utils.py_ 
 5. Add your dataset key (e.g. like "snopes") to _scripts/run_mt_dnn_all_stance_MTL_seed_loop.sh_ and execute the script
 
-###Add you own adversarial attack
+### Add you own adversarial attack
 For all steps in the following, please use the other adversarial attacks for guidance.
 
 1. Add your function in _data_utils/glue_utils.py_ (e.g. like _create_adversarial_negation()_)
