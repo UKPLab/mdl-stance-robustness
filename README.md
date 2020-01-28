@@ -5,10 +5,7 @@ This repository modifies and adapts the [official mt-dnn repository](https://git
 ##### Fine-tuned models
 The BERT and MT-DNN weights, fine-tuned on all ten stance detection datasets, can be downloaded [here](https://public.ukp.informatik.tu-darmstadt.de/bes/fine_tuned_models.zip). The models can be placed in folder _mt_dnn_models_ and used by modifying the run scripts (see below).
 
-
-Contact person: [Benjamin Schiller](mailto:schiller@ukp.informatik.tu-darmstadt.de)
-
-https://www.ukp.tu-darmstadt.de/
+Further details can be found in our publication [Stance Detection Benchmark: How Robust Is Your Stance Detection?](https://arxiv.org/abs/2001.01565).
 
 
 ### Install requirements
@@ -100,3 +97,17 @@ For all steps in the following, please use the other adversarial attacks for gui
 4. Pass the adversarial attack data into _build_handler()_ in _prepro.py_ and add another entry for your attack in this function
 
 Note: If the attack modifies the length of the original sentences, please consider this for the cutoff that takes place in functions _build_data()_ and _build_data_single()_ in _prepro.py_ in order to avoid information loss.
+
+## Citing
+If you find this work helpful, please cite our publication [Stance Detection Benchmark: How Robust Is Your Stance Detection?](https://arxiv.org/abs/2001.01565):
+
+    @article{schiller-2020-mdl-robustness,
+        title={Stance Detection Benchmark: How Robust Is Your Stance Detection?},
+        author={Benjamin Schiller and Johannes Daxenberger and Iryna Gurevych},
+        year={2020},
+        journal={arXiv preprint arXiv:2001.01565}
+    }
+
+Contact person: [Benjamin Schiller](mailto:schiller@ukp.informatik.tu-darmstadt.de)
+
+https://www.ukp.tu-darmstadt.de/
