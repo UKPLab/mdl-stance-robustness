@@ -1,4 +1,5 @@
 # Copyright (c) Microsoft. All rights reserved.
+# Modified Copyright by Ubiquitous Knowledge Processing (UKP) Lab, Technische Universität Darmstadt
 import argparse
 from data_utils.log_wrapper import create_logger
 from data_utils.glue_utils import *

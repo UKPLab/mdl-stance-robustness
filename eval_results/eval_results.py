@@ -1,3 +1,4 @@
+# Copyright by Ubiquitous Knowledge Processing (UKP) Lab, Technische Universität Darmstadt
 import json
 import numpy as np
 

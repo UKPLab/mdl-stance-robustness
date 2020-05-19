@@ -1,4 +1,5 @@
 # Copyright (c) Microsoft. All rights reserved.
+# Modified Copyright by Ubiquitous Knowledge Processing (UKP) Lab, Technische Universität Darmstadt
 import json
 import numpy as np
 import random

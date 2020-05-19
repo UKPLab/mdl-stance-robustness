@@ -1,4 +1,5 @@
 # Copyright (c) Microsoft. All rights reserved.
+# Modified Copyright by Ubiquitous Knowledge Processing (UKP) Lab, Technische Universität Darmstadt
 
 from .vocab import Vocabulary
 from .metrics import *
