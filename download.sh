@@ -81,10 +81,10 @@ mv stance.zip $DATA_DIR/SCD
 ## Download SemEval2016Task6
 mkdir $DATA_DIR/SemEval2016Task6
 wget http://www.saifmohammad.com/WebDocs/stance-data-all-annotations.zip
-unzip -p stance-data-all-annotations.zip data-all-annotations/trialdata-all-annotations.txt >$DATA_DIR/SemEval2016task6/trialdata-all-annotations.txt
-unzip -p stance-data-all-annotations.zip data-all-annotations/trainingdata-all-annotations.txt >$DATA_DIR/SemEval2016task6/trainingdata-all-annotations.txt
-unzip -p stance-data-all-annotations.zip data-all-annotations/testdata-taskA-all-annotations.txt >$DATA_DIR/SemEval2016task6/testdata-taskA-all-annotations.txt
-unzip -p stance-data-all-annotations.zip data-all-annotations/readme.txt >$DATA_DIR/SemEval2016task6/readme.txt
+unzip -p stance-data-all-annotations.zip data-all-annotations/trialdata-all-annotations.txt >$DATA_DIR/SemEval2016Task6/trialdata-all-annotations.txt
+unzip -p stance-data-all-annotations.zip data-all-annotations/trainingdata-all-annotations.txt >$DATA_DIR/SemEval2016Task6/trainingdata-all-annotations.txt
+unzip -p stance-data-all-annotations.zip data-all-annotations/testdata-taskA-all-annotations.txt >$DATA_DIR/SemEval2016Task6/testdata-taskA-all-annotations.txt
+unzip -p stance-data-all-annotations.zip data-all-annotations/readme.txt >$DATA_DIR/SemEval2016Task6/readme.txt
 rm -rf stance-data-all-annotations.zip
 
 ## Download SemEval2019Task7
