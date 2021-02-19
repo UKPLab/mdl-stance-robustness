@@ -110,6 +110,6 @@ echo ""
 ## Download UKP Sentential Argument Mining and Snopes Corpus
 mkdir $DATA_DIR/ArgMin
 mkdir $DATA_DIR/Snopes
-echo "UKP Sentential Argument Mining and Snopes corpus: Please send an e-Mail to schiller@ukp.informatik.tu-darmstadt.de
-and ask for the UKP Sentential Argument Mining Corpus and Snopes corpus. Copy all 8 topic files of the ArgMin corpus
+echo "Please request the UKP Sentential Argument Mining and Snopes corpus at https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2345 
+and https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2081. Copy all 8 topic files of the ArgMin corpus
 into ${DATA_DIR}/ArgMin/. For Snopes, copy the file snopes_corpus_2.csv into ${DATA_DIR}/Snopes/."
