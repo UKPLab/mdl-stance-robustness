@@ -5,7 +5,7 @@ This repository modifies and adapts the [official mt-dnn repository](https://git
 ##### Fine-tuned models
 The BERT and MT-DNN weights, fine-tuned on all ten stance detection datasets, can be downloaded [here](https://public.ukp.informatik.tu-darmstadt.de/bes/fine_tuned_models.zip). The models can be placed in folder _mt_dnn_models_ and used by modifying the run scripts (see below).
 
-Further details can be found in our publication [Stance Detection Benchmark: How Robust Is Your Stance Detection?](https://arxiv.org/abs/2001.01565).
+Further details can be found in our publication [Stance Detection Benchmark: How Robust Is Your Stance Detection?](https://doi.org/10.1007/s13218-021-00714-w).
 
 
 ### Install requirements
@@ -99,14 +99,16 @@ For all steps in the following, please use the other adversarial attacks for gui
 Note: If the attack modifies the length of the original sentences, please consider this for the cutoff that takes place in functions _build_data()_ and _build_data_single()_ in _prepro.py_ in order to avoid information loss.
 
 ## Citing
-If you find this work helpful, please cite our publication [Stance Detection Benchmark: How Robust Is Your Stance Detection?](https://arxiv.org/abs/2001.01565):
+If you find this work helpful, please cite our publication [Stance Detection Benchmark: How Robust Is Your Stance Detection?](https://doi.org/10.1007/s13218-021-00714-w):
 
-    @article{schiller-2020-mdl-robustness,
-        title={Stance Detection Benchmark: How Robust Is Your Stance Detection?},
-        author={Benjamin Schiller and Johannes Daxenberger and Iryna Gurevych},
-        year={2020},
-        journal={arXiv preprint arXiv:2001.01565}
-    }
+        @article{schiller2021stance,
+                author = {Schiller, Benjamin and Daxenberger, Johannes and Gurevych, Iryna},
+                year = {2021},
+                month = {03},
+                title = {Stance Detection Benchmark: How Robust is Your Stance Detection?},
+                journal = {KI - Künstliche Intelligenz},
+                doi = {10.1007/s13218-021-00714-w}
+        }
 
 Contact person: [Benjamin Schiller](mailto:schiller@ukp.informatik.tu-darmstadt.de)
 
