@@ -3,7 +3,7 @@
 This repository modifies and adapts the [official mt-dnn repository](https://github.com/namisan/mt-dnn) to multi-dataset stance detection and robustness experiments. Ten stance detection datasets of different domains are trained via single-dataset and multi-dataset learning. Three adversarial attacks to probe and compare the robustness of both settings have been added. The framework can easily be adapted to include more datasets and adversarial attack sets.
 
 ##### Fine-tuned models
-The BERT and MT-DNN weights, fine-tuned on all ten stance detection datasets, can be downloaded [here](https://public.ukp.informatik.tu-darmstadt.de/bes/fine_tuned_models.zip). The models can be placed in folder _mt_dnn_models_ and used by modifying the run scripts (see below).
+The BERT and MT-DNN weights, fine-tuned on all ten stance detection datasets, can be downloaded [here](https://tudatalib.ulb.tu-darmstadt.de/handle/tudatalib/2848). The models can be placed in folder _mt_dnn_models_ and used by modifying the run scripts (see below).
 
 Further details can be found in our publication [Stance Detection Benchmark: How Robust Is Your Stance Detection?](https://doi.org/10.1007/s13218-021-00714-w).
 
