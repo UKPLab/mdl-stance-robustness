@@ -75,7 +75,7 @@ rm -rf perspectrum
 
 ## Download SCD
 mkdir $DATA_DIR/SCD
-wget http://www.hlt.utdallas.edu/~saidul/stance/stance.zip
+wget https://www.hlt.utdallas.edu/~saidul/stance/stance.zip
 mv stance.zip $DATA_DIR/SCD
 
 ## Download SemEval2016Task6
